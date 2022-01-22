@@ -83,6 +83,10 @@ a:active {
     padding: 0 1.5rem;
 }
 
+.proofs-review {
+    width: 100%;
+}
+
 .proof {
     margin-bottom: 2.0625rem;
 }
@@ -93,8 +97,10 @@ a:active {
     letter-spacing: -1.1px;
     line-height: 32px;
     padding-bottom: 1.125rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     text-align: center;
-    width: 60%;
+    width: 100%;
 }
 
 .proof__description {
@@ -162,4 +168,87 @@ a:active {
     margin-top: 1.625rem;
     line-height: 22px;
     width: 100%;
+}
+
+/* ------- DESKTOP ------- */
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+        background-position: left top, center bottom;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+        background-position: left top, center bottom;
+    }
+
+    .proof,
+    .cards {
+        flex-direction: row;
+        max-width: 1110px;
+    }
+
+    .proof {
+        margin-bottom: 0;
+    }
+
+    .proof__title {
+        font-size: 3rem;
+        line-height: 48px;
+        padding-left: 0;
+        text-align: left;
+        width: 80%;
+    }
+
+    .proof__description {
+        text-align: left;
+        width: 90%;
+    }
+
+    .proof-review {
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 1.3125rem 2rem;
+        max-width: 445px;
+    }
+
+    .proof-review__text {
+        padding-top: 0;
+    }
+
+    .proof-review__stars {
+        margin-right: 2rem;
+    }
+
+    .proofs-review {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proof-review:nth-child(1) {
+        margin-right: 4rem;
+    }
+
+    .proof-review:nth-child(2) {
+        margin-right: 2rem;
+    }
+
+    .card {
+        max-width: 350px;
+        margin-right: 1.875rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .card:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .card:nth-child(3) {
+        margin-top: 4rem;
+    }
 }
